@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/waves.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/nativedroid2.css" />
+    <script type="text/javascript" src="cordova.js"></script>
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -33,9 +34,29 @@
             </h1>
         </div>
         <div role="main" class="ui-content" data-inset="false">
-            <p>
-                This is a demo app made with nativeDroid Theme, that implements the material design
-            </p>
+            
+            
+             <script type="text/javascript">
+    var map;
+    document.addEventListener("deviceready", function() {
+      var div = document.getElementById("map_canvas");
+
+      // Initialize the map view
+      map = plugin.google.maps.Map.getMap(div);
+
+      // Wait until the map is ready status.
+      map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+    }, false);
+
+    function onMapReady() {
+      var button = document.getElementById("button");
+      button.addEventListener("click", onBtnClicked, false);
+    }
+
+    function onBtnClicked() {
+      map.showDialog();
+    }
+    </script>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js">
