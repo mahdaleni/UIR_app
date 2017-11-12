@@ -64,6 +64,7 @@
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
         <plugin name="com.phonegap.plugins.barcodescanner" />
+    
     -->
 
     <!-- Define app icon for each platform. -->
@@ -133,6 +134,12 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+        <plugin name="cordova-plugin-googlemaps" spec="2.0.0">
+    <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDXZWqsD5m1X74Lz-NanNAHriU7xDdfQtg" />
+    <variable name="API_KEY_FOR_IOS" value="AIzaSyDXZWqsD5m1X74Lz-NanNAHriU7xDdfQtg" />
+    <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="My custom when in use message" />
+    <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="My custom always usage message" />
+</plugin>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
