@@ -11,11 +11,28 @@
     <link rel="stylesheet" href="css/waves.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/nativedroid2.css" />
-   
-   
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    
+    
+    
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="css/app.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fittext.js"></script>
+    <script src="index.js"></script>
+    
+    
+    <link href="css/indexa.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/starbucks_hawaii_stores.json"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    
+    
+    <style>
+        body {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,39 +59,35 @@
       map.showDialog();
     }
     </script>
-
+        
+        
+        
         
         
         
         <nd2-include data-src="panel.left.html">
         </nd2-include>
-        <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom'
-             data-display="overlay">
-            <nd2-include data-src="bottom.sheet.html">
-            </nd2-include>
-        </div>
-        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-            <a href="#bottomsheet" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='1.2s'><i class="zmdi zmdi-more-vert"></i></a>
-            <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
-            <h1 class="wow fadeIn" data-wow-delay='0.4s'>
-                Page Title
+        <div data-role="header" data-position="fixed">
+            <a href="#leftpanel" class="ui-btn ui-btn-left"><i class="fa fa-bars"></i></a>
+            <h1>
+                My Location--
             </h1>
         </div>
         <div role="main" class="ui-content" data-inset="false">
-            
-            
-            
-            
-            <div style="width:100%;height:400px" id="map_canvas"></div>
-            
-            
-            
-            
-            
+            content here.
+        </div>
+        
+        
+        
+        
+    <div style="width:100%;height:400px" id="map_canvas"></div>
+        
+        
+        
+        
         
     </div>
-    <script type="text/javascript" src="cordova.js">
-    </script>
+   
     <script src="scripts/jquery.min.js">
     </script>
     <script src="scripts/jquery.mobile.min.js">
