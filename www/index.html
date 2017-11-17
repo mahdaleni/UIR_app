@@ -16,9 +16,9 @@
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&v=3.19"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&v=3.19"></script>
+	
     
     
     
@@ -75,11 +75,7 @@
         key: snapshot.key()
       });
         
-        
-        
-
-
-
+       
 
 //Pan Back to Marker
 google.maps.event.addListener(marker,'click',function() {
@@ -87,14 +83,7 @@ google.maps.event.addListener(marker,'click',function() {
   map.setZoom(19);
   map.setCenter(marker.getPosition());
   window.setTimeout(function() {map.setZoom(pos);},19000);
-});
-
-
-
-
-
-    
-       
+}); 
 
       markers.push(marker);
       console.log(typeof marker);
