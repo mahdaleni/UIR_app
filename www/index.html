@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/nativedroid2.css" />
    
+   
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -19,6 +20,32 @@
 
 <body>
     <div data-role="page">
+        
+        
+        
+        
+        
+         <script type="text/javascript">
+    var map;
+    document.addEventListener("deviceready", function() {
+      var div = document.getElementById("map_canvas");
+      // Initialize the map view
+      map = plugin.google.maps.Map.getMap(div);
+      // Wait until the map is ready status.
+      map.addEventListener(plugin.google.maps.event.MAP_READY, onMapReady);
+    }, false);
+    function onMapReady() {
+      var button = document.getElementById("button");
+      button.addEventListener("click", onBtnClicked, false);
+    }
+    function onBtnClicked() {
+      map.showDialog();
+    }
+    </script>
+
+        
+        
+        
         <nd2-include data-src="panel.left.html">
         </nd2-include>
         <div data-role="panel" id="bottomsheet" data-animate="false" data-position='bottom'
@@ -34,6 +61,13 @@
             </h1>
         </div>
         <div role="main" class="ui-content" data-inset="false">
+            
+            
+            
+            
+            <div style="width:100%;height:400px" id="map_canvas"></div>
+            
+            
             
             
             
